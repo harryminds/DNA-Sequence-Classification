@@ -6,32 +6,32 @@ Demonstration of machine learning classification methods using DNA sequence data
 
 # Project Introduction
 
-For this project my main focus was going to be demonstrating classification models and methods. To pick an example, I decided to research DNA sequencing analysis, because I thought it would be interesting, and the data that is available publicly is astonishingly immense. 
+For this project, my main focus is going to be on demonstrating classification models and methods. To pick an example, I decided to research DNA sequencing analysis, because I thought it would be interesting, and the data that is available publicly is astonishingly immense.
 
-DNA is found in the cells of every living thing on Earth. Scientists can study the DNA of organisms to understand more about the function of an organism, or analyze the DNA to determine if they have found a new species.
+DNA is found in the cells of every living thing on Earth. Scientists can study the DNA of organisms to understand more about the function of an organism or analyze the DNA to determine if they have found a new species.
 
-DNA classification has many uses - from species identification to differentiation, research can provide insights on how different one species is from another, or how one species evolved over time. Genetic sequence analysis can identify the differences in gene, insertions and deletions within subsets of the DNA, or identifying the change in phenotypes from species to species. Analysis of the differences in the sequences from differents species can tell us a lot about the differences between species, but also how similiar all organisms are.
+DNA classification has many uses - from species identification to differentiation, research can provide insights on how different one species is from another, or how one species evolved. Genetic sequence analysis can identify the differences in genes, insertions, and deletions within subsets of the DNA, or identify the change in phenotypes from species to species. Analysis of the differences in the sequences from different species can tell us a lot about the differences between species, but also how similar all organisms are.
 
 Through optimization of the modeling in DNA sequence analysis, genomic researchers can make more accurate and faster results for classifying and differentiating species from DNA samples.
 
+
 ### Hypothesis:
 
-What if I could take DNA information from a certain genome and compare to other genomes? Would there be a signal in the noise? Of course, there would be and there is, but I started with a null hypothesis in question: Could these genomes be unrelated or basically random sequences next when compared?
+What if I could take DNA information from a certain genome and compare it to other genomes? Would there be a signal in the noise? Of course, there would be and there is, but I started with a null hypothesis in question: Could these genomes be unrelated or random sequences next when compared?
 
-Alternatively, I hope to find the pattern of similarity, and I hope that will be measured in the metrics of my model. I am no biologist, but as a data scientist, I will be viewing this problem as one of loss - observing the similiarities between genomes and explaining the variance between them by predicting their respective class. From a techinical point of view, this project will use machine learning methods to analyze and classify the DNA sequences from different species. The results of this model will be used to predict the species of a given set of classes based on the genetic sequence alone. This project will focus primarily on the mathematical differences between sequences in genetic code, rather than any special genetic analysis of genes and phenotypes between species. I am interested in the problem of how similiar or different two species may be from one other, from a generalized and statisical point of view.
-
+Alternatively, I hope to find the pattern of similarity, and I hope that will be measured in the metrics of my model. I am no biologist, but as a data scientist, I will be viewing this problem as one of loss - observing the similarities between genomes and explaining the variance between them by predicting their respective class. From a technical point of view, this project will use machine learning methods to analyze and classify the DNA sequences from different species. The results of this model will be used to predict the species of a given set of classes based on the genetic sequence alone. This project will focus primarily on the mathematical differences between sequences in genetic code, rather than any special genetic analysis of genes and phenotypes between species. I am interested in the problem of how similar or different two species may be from one other, from a generalized and statistical point of view.
 
 # What is DNA?
 
-DNA, or deoxyribonucleic acid, is a molecule that contains the inherited code used by cells in an organism to generate  proteins. It is found in the nucleus of cells. DNA consists of four bases: adenine or A, cytosine or C, guanine or G, and thymine or T. Each strand of DNA is actually composed of two strands that are held together by a sugar based structure in the shape of a double helix. Each base is connected to the opposite strand by its complementary base: A always connects to T, C always connects to G, G always connects to C, and T always connects to A. This means that each complementary strand of DNA is like a reflection of the other. When DNA is sequenced into a string composed of the four bases, only one string has been catalogued in the data I am reading, without its complement.
+DNA, or deoxyribonucleic acid, is a molecule that contains the inherited code used by cells in an organism to generate proteins. It is found in the nucleus of cells. DNA consists of four bases: adenine or A, cytosine or C, guanine or G, and thymine or T. Each strand of DNA is composed of two strands that are held together by a sugar-based structure in the shape of a double helix. Each base is connected to the opposite strand by its complementary base: A always connects to T, C always connects to G, G always connects to C, and T always connects to A. This means that each complementary strand of DNA is like a reflection of the other. When DNA is sequenced into a string composed of the four bases, only one string has been cataloged in the data I am reading, without its complement.
 
 ![](img/DNA.jpeg)
 
-Through complicated biological and molecular processes, DNA replicates or creates copies of itself known as mRNA. mRNA strands are short segmented copies of the DNA that can recombine with other segments of mRNA and in turn create combinations that are code for creating proteins. Different combinations create different proteins and these proteins are then used throughout the cell and the organism. DNA acts like computer code for creating the proteins like a program and thus why it is referred to as genetic code, or 'the building blocks of life'. Subsets of DNA strands can be identified for creating specific proteins and these are known as genes.
+Through complicated biological and molecular processes, DNA replicates or creates copies of itself known as mRNA. mRNA strands are short segmented copies of the DNA that can recombine with other segments of mRNA and in turn create combinations that are code for creating proteins. Different combinations create different proteins and these proteins are then used throughout the cell and the organism. DNA acts like computer code for creating the proteins like a program and thus why it is referred to as genetic code or the building blocks of life. Subsets of DNA strands can be identified for creating specific proteins and these are known as genes.
 
-The DNA in every cell is coiled up tightly together, and although it takes up a microscopic amount of space, it is very long. If you carefully unraveled a entire strand of Human DNA it would be about 1.8 meters long, and contains 3 billion base pairs i.e. combinations of A, C, G, and T.
+The DNA in every cell is coiled up tightly together, and although it takes up a microscopic amount of space, it is very long. If you carefully unraveled an entire strand of Human DNA it would be about 1.8 meters long and contains 3 billion base pairs i.e. combinations of A, C, G, and T.
 
-Advances in technology have allowed scientists to sequence the microscopic data within a small margin of error. The total number of genes in one species is known as that species' genome. The Human Genome Project, ongoing from 1990 to completion in 2003, mapped the enitre human genome across about 20,000 non-overlapping samples. Today, there are many different species genomes mapped and publicly available to download for research and analysis.
+Advances in technology have allowed scientists to sequence microscopic data within a small margin of error. The total number of genes in one species is known as that species' genome. The Human Genome Project, ongoing from 1990 to completion in 2003, mapped the entire human genome across about 20,000 non-overlapping samples. Today, there are many different species genomes mapped and publicly available to download for research and analysis.
 
 # Common DNA sequence feature engineering methods
 
@@ -69,9 +69,13 @@ In other words, if we have a sequence like 'AAGTCGAGT' we will have 3 A's, 1 C, 
 
 # Modeling
 
-After iterating through different models, I found that sci-kit learn's ExtraTreesClassifier was the best classifier for binary and multiclass classification of the DNA sequences. My final model combines the preprocessing techinques from the KMerTransformer and the KGroupKmerTransformer and concatenates their transformations, before sending the data through the classifier.
+After iterating through different models, I found that sci-kit learn's ExtraTreesClassifier was the best classifier for binary and multiclass classification of the DNA sequences. 
 
 ![](img/graphs/gridsearch_bestclassifier.png)
+
+My final model combines the preprocessing techinques from the KMerTransformer and the KGroupKmerTransformer and concatenates their transformations, before sending the data through the classifier.
+
+![](img/graphs/final_model.png)
 
 # Results
 

@@ -1,6 +1,6 @@
 from sklearn.base import TransformerMixin, BaseEstimator
 import pandas as pd
-from tqdm import tqdm
+from tqdm.auto import tqdm
 from itertools import permutations
 
 
