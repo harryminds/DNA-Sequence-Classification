@@ -6,13 +6,13 @@ Demonstration of machine learning classification methods using DNA sequence data
 
 # Project Introduction
 
-For this project, my main focus is going to be on demonstrating classification models and methods. To pick an example, I decided to research DNA sequencing analysis, because I thought it would be interesting, and the data that is available publicly is astonishingly immense.
-
 DNA is found in the cells of every living thing on Earth. Scientists can study the DNA of organisms to understand more about the function of an organism or analyze the DNA to determine if they have found a new species.
 
 DNA classification has many uses - from species identification to differentiation, research can provide insights on how different one species is from another, or how one species evolved. Genetic sequence analysis can identify the differences in genes, insertions, and deletions within subsets of the DNA, or identify the change in phenotypes from species to species. Analysis of the differences in the sequences from different species can tell us a lot about the differences between species, but also how similar all organisms are.
 
 Through optimization of the modeling in DNA sequence analysis, genomic researchers can make more accurate and faster results for classifying and differentiating species from DNA samples.
+
+For this project, my main focus is going to be on demonstrating classification models and methods. To pick an example, I decided to research DNA sequencing analysis, because I thought it would be interesting, and the data that is available publicly is astonishingly immense.
 
 
 ### Hypothesis:
